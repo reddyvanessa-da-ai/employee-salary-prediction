@@ -3,10 +3,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load("best_model.pkl")
-scaler = joblib.load("scaler.pkl")
+model = joblib.load("models/best_model.pkl")
+scaler = joblib.load("models/scaler.pkl")
 
-st.title("💼 Employee Salary Classification")
+st.title("Employee Salary Prediction")
 st.write("Predict whether a person's annual income is <=50K or >50K.")
 
 # Category mappings
