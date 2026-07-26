@@ -1,19 +1,82 @@
-This directory includes a few sample datasets to get you started.
+# Employee Salary Prediction
 
-*   `california_housing_data*.csv` is California housing data from the 1990 US
-    Census; more information is available at:
-    https://docs.google.com/document/d/e/2PACX-1vRhYtsvc5eOR2FWNCwaBiKL6suIOrxJig8LcSBbmCbyYsayia_DvPOOBlXZ4CAlQ5nlDD8kTaIDRwrN/pub
+## Overview
 
-*   `mnist_*.csv` is a small sample of the
-    [MNIST database](https://en.wikipedia.org/wiki/MNIST_database), which is
-    described at: http://yann.lecun.com/exdb/mnist/
+This project predicts whether an individual's annual income is greater than $50K or less than or equal to $50K using machine learning. It covers the complete workflow from data preprocessing and model training to deployment using Streamlit.
 
-*   `anscombe.json` contains a copy of
-    [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet); it
-    was originally described in
+## Dataset
 
-    Anscombe, F. J. (1973). 'Graphs in Statistical Analysis'. American
-    Statistician. 27 (1): 17-21. JSTOR 2682899.
+The project uses the Adult Income Dataset from the UCI Machine Learning Repository. The dataset contains demographic and employment-related information such as age, workclass, education, occupation, marital status, capital gain, capital loss, hours worked per week, and native country.
 
-    and our copy was prepared by the
-    [vega_datasets library](https://github.com/altair-viz/vega_datasets/blob/4f67bdaad10f45e3549984e17e1b3088c731503d/vega_datasets/_data/anscombe.json).
+## Features
+
+- Missing value handling
+- Outlier removal
+- Label encoding of categorical features
+- Feature scaling using StandardScaler
+- Comparison of multiple classification models
+- Streamlit-based web application for prediction
+
+## Models Evaluated
+
+- Logistic Regression
+- K-Nearest Neighbors
+- Support Vector Machine
+- Random Forest
+- Gradient Boosting
+
+## Results
+
+Gradient Boosting achieved the best performance with an accuracy of **86.72%** and was selected as the final model for deployment.
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Streamlit
+- Joblib
+
+## Project Structure
+
+```
+employee-salary-prediction
+│
+├── data/
+├── models/
+├── notebook/
+├── app.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+## Installation
+
+Clone the repository.
+
+```bash
+git clone https://github.com/YOUR_USERNAME/employee-salary-prediction.git
+```
+
+Install the required packages.
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application.
+
+```bash
+streamlit run app.py
+```
+
+## Future Improvements
+
+- Hyperparameter tuning
+- Cross-validation
+- Feature importance analysis
+- Cloud deployment
